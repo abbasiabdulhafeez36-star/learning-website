@@ -1,0 +1,139 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car Cards</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: #f4f6f9;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .card-container {
+            display: flex;
+            gap: 25px;
+            flex-wrap: wrap;
+            justify-content: center;
+            max-width: 1200px;
+        }
+
+        .car-card {
+            background: #ffffff;
+            border-radius: 12px;
+            overflow: hidden;
+            width: 350px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .car-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+        }
+
+        .car-img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .car-content {
+            padding: 20px;
+        }
+
+        .car-title {
+            font-size: 22px;
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        .car-desc {
+            font-size: 14px;
+            color: #666;
+            margin-bottom: 15px;
+            line-height: 1.5;
+        }
+
+        .car-price {
+            font-size: 18px;
+            font-weight: bold;
+            color: #27ae60;
+            margin-bottom: 20px;
+        }
+
+        .details-btn {
+            display: block;
+            width: 100%;
+            padding: 12px;
+            background-color: #2c3e50;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.2s ease;
+        }
+
+        .details-btn:hover {
+            background-color: #1abc9c;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="card-container">
+        <!-- Card 1 -->
+        <div class="car-card">
+            <img src="./before-pic.jpg">
+            <div class="car-content">
+                <h2 class="car-title">BMW M4 Competition</h2>
+                <p class="car-desc">Experience ultimate performance, sleek aerodynamic styling, and next-gen driving dynamics.</p>
+                <div class="car-price">$74,900</div>
+                <button class="details-btn" onclick="showCarDetails('BMW M4 Competition')">View Details</button>
+            </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="car-card">
+            <img src="https://images.unsplash.com/photo-1617814076367-b759c7d7e738?auto=format&fit=crop&w=600&q=80" alt="Electric Car" class="car-img">
+            <div class="car-content">
+                <h2 class="car-title">Audi e-tron GT</h2>
+                <p class="car-desc">Fully electric luxury sedan combining breathtaking acceleration with sustainable engineering.</p>
+                <div class="car-price">$104,000</div>
+                <button class="details-btn" onclick="showCarDetails('Audi e-tron GT')">View Details</button>
+            </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="car-card">
+            <img src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=600&q=80" alt="Luxury Sports Car" class="car-img">
+            <div class="car-content">
+                <h2 class="car-title">Porsche 911 Carrera</h2>
+                <p class="car-desc">An iconic masterpiece built for pure driving enthusiasts with unmatched timeless appeal.</p>
+                <div class="car-price">$114,400</div>
+                <button class="details-btn" onclick="showCarDetails('Porsche 911 Carrera')">View Details</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function showCarDetails(carName) {
+            alert("Aap ne " + carName + " select kiya hai! Mazeed details jald available hongi.");
+        }
+    </script>
+
+</body>
+</html>

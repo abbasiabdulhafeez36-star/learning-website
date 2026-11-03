@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Netwave - Creative Web Agency</title>
+  <!-- FontAwesome for Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  <nav>
+    <a href="#" class="logo">
+      <span class="logo-text">Netwave.</span>
+    </a>
+
+    <!-- Mobile Menu Toggle Button -->
+    <div class="menu-toggle" id="mobile-menu">
+      <i class="fa-solid fa-bars"></i>
+    </div>
+
+    <!-- Navigation Links & Auth Buttons -->
+    <div class="nav-menu" id="nav-menu">
+      <ul class="nav-links">
+        <li class="dropdown">
+          <a href="#projects">Products</a>
+        </li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+
+      <div class="auth-buttons">
+        <a href="./login.html" class="nav-btn login-btn">Login</a>
+        <a href="./signup.html" class="nav-btn signup-btn">Sign Up</a>
+        <button onclick="logout()" class="nav-btn logout-btn" id="logoutBtn">Logout</button>
+        <a href="./profile.html" class="profile-btn">
+          <img src="./images.jpg" alt="Profile" width="40" height="40">
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <header class="hero">
+    <div class="hero-content">
+      <h1>Unleash Your Online Potential with Our Creative Web Agency</h1>
+      <p>
+        We build modern, responsive, and high-performance websites to help your business grow and stand out in the digital world.
+      </p>
+      <div class="hero-buttons">
+        <a href="#contact" class="btn primary-btn">Get in Touch</a>
+        <a href="#projects" class="btn secondary-btn">Learn More</a>
+      </div>
+    </div>
+    <div class="hero-image">
+      <img src="./before-pic.jpg" alt="Hero Illustration">
+    </div>
+  </header>
+
+  <!-- About Section -->
+  <header class="hero" id="about">
+    <div class="hero-image">
+      <img src="./before-pic.jpg" alt="Hero Illustration">
+    </div>
+    <div class="hero-content">
+      <h1>Unleash Your Online Potential with Our Creative Web Agency</h1>
+      <p>
+        We build modern, responsive, and high-performance websites to help your business grow and stand out in the digital world.
+      </p>
+      <div class="hero-buttons">
+        <a href="#contact" class="btn primary-btn">Get in Touch</a>
+        <a href="#projects" class="btn secondary-btn">Learn More</a>
+      </div>
+    </div>
+    
+  </header>
+
+  <!-- Cards Section -->
+  <section class="section-cards" id="projects">
+    <h2>Products</h2>
+    <div class="card-container">
+      <div class="card">
+        <img src="./before-pic.jpg" alt="Drivers">
+        <h3>Get drivers & downloads</h3>
+        <p>Last run: June 24, 2020</p>
+        <button class="card-btn">Run</button>
+      </div>
+      <div class="card">
+        <img src="./before-pic.jpg" alt="Hardware">
+        <h3>Scan hardware</h3>
+        <p>Last run: June 02, 2020</p>
+        <button class="card-btn">Run</button>
+      </div>
+      <div class="card">
+        <img src="./before-pic.jpg" alt="Clean">
+        <h3>Clean files</h3>
+        <p>Last run: June 24, 2020</p>
+        <button class="card-btn">Run</button>
+      </div>
+      <div class="card">
+        <img src="./before-pic.jpg" alt="Tune">
+        <h3>Tune Performance</h3>
+        <p>Last run: June 24, 2020</p>
+        <button class="card-btn">Run</button>
+      </div>
+    </div>
+  </section>
+
+
+
+  section
+
+
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-container">
+      <div class="footer-col">
+        <a href="#" class="logo">
+         <span class="logo-text">Netwave.</span>
+        </a>
+        <h4>About</h4>
+        <p>Providing top-tier computer support, drivers, and hardware optimization services.</p>
+      </div>
+      <div class="footer-col">
+        <h4>About</h4>
+        <ul>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Links</h4>
+        <ul>
+          <li><a href="#projects">Facebook</a></li>
+          <li><a href="#careers">Twiter</a></li>
+          <li><a href="#about">Youtube</a></li>
+          <li><a href="#contact">Whatsapp</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contact Support</h4>
+        <p>Email: carsfresher@gmail.com</p>
+        <p>Phone: 03108273704</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 Netwave. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
