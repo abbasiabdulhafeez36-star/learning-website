@@ -2,20 +2,26 @@ function signUp() {
   let email = document.getElementById("email");
   let password = document.getElementById("password");
 
-  if (!email || !password) return;
+  if (!email || !password || !email.value || !password.value) {
+    alert("Please fill in both Email and Password.");
+    return;
+  }
 
   localStorage.setItem("signupemail", email.value);
   localStorage.setItem("signuppassword", password.value);
 
+  alert("Sign up successful!");
   window.location.href = "login.html";
 }
-
 
 function login() {
   let loginEmail = document.getElementById("loginemail");
   let loginPassword = document.getElementById("loginpassword");
 
-  if (!loginEmail || !loginPassword) return;
+  if (!loginEmail || !loginPassword || !loginEmail.value || !loginPassword.value) {
+    alert("Please enter your email and password.");
+    return;
+  }
 
   let storedEmail = localStorage.getItem("signupemail");
   let storedPassword = localStorage.getItem("signuppassword");
@@ -28,33 +34,25 @@ function login() {
   }
 }
 
-
 function logout() {
   localStorage.removeItem("signupemail");
   localStorage.removeItem("signuppassword");
-  
   window.location.href = "index.html";
 }
 
-
 document.addEventListener("DOMContentLoaded", () => {
-  let signupBtn = document.getElementById("signup");
-  let loginBtn = document.getElementById("login");
-  let logoutBtn = document.getElementById("logoutBtn"); 
+  let signupBtn = document.getElementById("signupBtn");
+  let loginBtn = document.getElementById("loginBtn");
+  let logoutBtn = document.getElementById("logoutBtn");
+  let profilebtn = document.getElementById("profilebtn");
+
   let localEmail = localStorage.getItem("signupemail");
   let localPassword = localStorage.getItem("signuppassword");
 
-  console.log(localEmail, localPassword);
-  
+  const isLoggedIn = localEmail !== null && localPassword !== null;
 
-  if (localEmail === null && localPassword === null) {
-    if (loginBtn) loginBtn.style.display = "inline-block";
-    if (signupBtn) signupBtn.style.display = "inline-block";
-    if (logoutBtn) logoutBtn.style.display = "none";
-  } 
-  if (localEmail !== null && localPassword !== null)  {
-    if (loginBtn) loginBtn.style.display = "none";
-    if (signupBtn) signupBtn.style.display = "none";
-    if (logoutBtn) logoutBtn.style.display = "inline-block";
-  }
+  if (loginBtn) loginBtn.style.display = isLoggedIn ? "none" : "inline-block";
+  if (signupBtn) signupBtn.style.display = isLoggedIn ? "none" : "inline-block";
+  if (logoutBtn) logoutBtn.style.display = isLoggedIn ? "inline-block" : "none";
+  if (profilebtn) profilebtn.style.display = isLoggedIn ? "inline-block" : "none";
 });
