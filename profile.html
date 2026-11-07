@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="ur">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>User Profile Form</title>
+  <title>User Profile - Netwave</title>
   <link rel="stylesheet" href="prof.css">
 </head>
 <body>
@@ -12,22 +12,31 @@
     <h2>User Profile</h2>
     
     <form>
-      
-      
       <div class="avatar-upload">
         <label for="imageUpload">
-          <img id="imagePreview" src="./images.jpg">
+          <img id="imagePreview" src="./images.jpg" alt="Profile Picture">
         </label>
         <input type="file" id="imageUpload" accept="image/*" hidden>
         <p>Click image to change photo</p>
       </div>
 
-    
       <div class="input-group">
         <label for="fullname">Full Name</label>
         <input type="text" id="fullname" placeholder="Enter your full name" required>
       </div>
 
+      <div class="input-group">
+        <label for="profileEmail">Email Address</label>
+        <input type="email" id="profileEmail" placeholder="Enter your email" required>
+      </div>
 
+      <div class="input-group">
+        <label for="profileContact">Contact Number</label>
+        <input type="text" id="profileContact" placeholder="Enter contact number">
+      </div>
+    </form>
+  </div>
+
+  <script src="../js/app.js"></script>
 </body>
 </html>

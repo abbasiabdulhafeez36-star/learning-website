@@ -38,9 +38,13 @@ body {
   height: 100px;
   border-radius: 50%;
   object-fit: cover;
-  border: 3px solid #007bff;
+  border: 3px solid #5549e9;
   cursor: pointer;
   transition: opacity 0.3s ease;
+}
+
+.avatar-upload img:hover {
+  opacity: 0.8;
 }
 
 .avatar-upload p {
@@ -74,22 +78,5 @@ body {
 
 .input-group input:focus,
 .input-group textarea:focus {
-  border-color: #007bff;
-}
-
-.btn-save {
-  width: 100%;
-  padding: 12px;
-  background-color: #007bff;
-  color: white;
-  border: none;
-  border-radius: 6px;
-  font-size: 16px;
-  font-weight: bold;
-  cursor: pointer;
-  transition: background-color 0.3s;
-}
-
-.btn-save:hover {
-  background-color: #0056b3;
+  border-color: #5549e9;
 }
